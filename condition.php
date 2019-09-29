@@ -24,7 +24,22 @@
                 }else{
                     echo "Pleaes entry a real value";
                 }
-
+        
+                echo "<br> <br> <br>";
+        
+            ?>
+            
+            
+            <?php 
+                $today = date("H"); 
+        
+                if ($today > "28"){
+                    echo "Tomorrow was 28th Sep";
+                }elseif($today = "29"){
+                    echo "Today is 29th September";
+                }else{
+                    echo "Tomorrow will 30th Sep";
+                }
             ?>
         
     </body>
