@@ -74,6 +74,26 @@
                     }
         
             ?>
+            
+            <?php
+                //array sorting
+                $array = array(15,3,1,76,7,4,8,22);
+                for($i=0; $i < count($array); $i++)
+                {
+                  for($j=0; $j < $i; $j++)
+                  {
+                    if($array[$i] < $array[$j])
+                    {
+                        $sorting = $array[$i];
+                        $array[$i] = $array[$j];
+                        $array[$j] = $sorting;
+                        
+                    }
+                  }
+                }
+                echo "<br /><pre>";
+               print_r($array);
+            ?>
         
     </body>
 </html>
