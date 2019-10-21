@@ -13,21 +13,21 @@ if (isset($_POST['submit'])) {
 
     $connection = mysqli_connect('localhost', 'root', '', 'loginapp');
 
-    // if ( $connection) {
-    //    echo "Database connection succesfully";
-    // }else{
-    //    die("Connection failed");
-    // }
-
-    // $query = "INSERT INTO users(username, password)";
-    // $query .= "VALUES( '$username', '$password')";
-     $list = "SELECT * FROM users";
-
-    $result = mysqli_query($connection, $list);
-
-    if (!$result) {
-       die('Connection Falied' .mysqli_error());
+    if ( $connection) {
+       echo "Database connection succesfully";
+    }else{
+       die("Connection failed");
     }
+
+    $query = "INSERT INTO users(username, password)";
+    $query .= "VALUES( '$username', '$password')";
+     //$list = "SELECT * FROM users";
+
+    // $result = mysqli_query($connection, $list);
+
+    // if (!$result) {
+    //    die('Connection Falied' .mysqli_error());
+    // }
 
    
 
@@ -63,11 +63,11 @@ if (isset($_POST['submit'])) {
 
              <?php 
 
-        while ($row = mysqli_fetch_assoc($result)) {
-            echo "<pre>";
-           print_r($row);
-           echo "</pre>";
-        }
+        // while ($row = mysqli_fetch_assoc($result)) {
+        //     echo "<pre>";
+        //    print_r($row);
+        //    echo "</pre>";
+        // }
         ?>
 
         <!-- UIkit JS -->
